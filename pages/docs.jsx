@@ -141,8 +141,13 @@ const Docs = ({ products }) => {
 export default Docs;
 
 export const getStaticProps = async () => {
-  const res = await fetch("https://fake-coffee-api.vercel.app/api/docs");
-  const products = await res.json();
+  let products = [];
+  try {
+    const res = await fetch(process.env.VERCEL_URL + "/api/docs");
+    products = await res.json();
+  } catch (error) {
+    console.log(`Error connecting to ${process.env.VERCEL_URL}`, error);
+  }
 
   return {
     props: {
