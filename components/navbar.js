@@ -5,7 +5,7 @@ const Navbar = (props) => {
   return (
     <div className={styles.navbar}>
       <nav className={styles.navbarContainer}>
-        <Link href="https://fake-coffee-api.vercel.app">
+        <Link href="https://fake-coffee-brand-api.vercel.app">
           <img
             className={styles.logo}
             src={props.src}
@@ -26,7 +26,7 @@ const Navbar = (props) => {
           <li className={styles.navbar__item}>
             <Link
               className={styles.navbar__link}
-              href="https://github.com/ArvidGardebo/fake-coffee-brand-api"
+              href="https://github.com/pagevamp/fake-coffee-brand-api"
             >
               Github
             </Link>
