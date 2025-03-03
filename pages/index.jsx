@@ -42,14 +42,11 @@ function Home() {
                 website prototype
               </p>
               <div className={home.buttonContainer}>
-                <Link href="/docs" className={global.primaryBtn}>
-                  Read Docs
-                </Link>
                 <Link
-                  href="https://github.com/ArvidGardebo/fake-coffee-brand-api"
+                  href="https://github.com/pagevamp/fake-coffee-brand-api"
                   className={global.secondaryBtn}
                 >
-                  View GitHub
+                  Docs
                 </Link>
               </div>
             </div>
