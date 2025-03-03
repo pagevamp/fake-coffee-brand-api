@@ -57,6 +57,7 @@ export default async function updateCoffeefake(req, res) {
     }
 
     //Update one
+    console.log(req.body)
     if (req.method === "POST" && JSON.parse(req.body).name) {
       const {
         name,
@@ -70,7 +71,7 @@ export default async function updateCoffeefake(req, res) {
       } = JSON.parse(req.body);
 
       const newCoffee = {
-        _id: "6424335b59f9f6fdd657d2e1",
+        _id: "6424335b59f9f6fdd657d2e2",
         id: 21,
         name,
         description,
@@ -81,6 +82,8 @@ export default async function updateCoffeefake(req, res) {
         grind_option,
         roast_level,
       };
+
+      const data = await db.collection("coffee").insertOne(newCoffee);
 
       res.status(200).json({ success: true, added: newCoffee });
       return;
