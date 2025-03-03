@@ -111,11 +111,6 @@ function Home() {
                 Happy coding!
               </p>
             </div>
-            <div className="sandbox">
-              <div className="sandbox__carousel">
-                <Slider />
-              </div>
-            </div>
 
             <FetchMethods
               title="Get all products."
